@@ -1,0 +1,21 @@
+{
+  "name": "ComputerRalle – DIGITAL-easy",
+  "short_name": "ComputerRalle",
+  "icons": [
+    {
+      "src": "images/favicons/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/favicons/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "theme_color": "#ff6a21",
+  "background_color": "#0f1115",
+  "display": "browser"
+}

@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Proxmox-Anleitungen, Linux-Server und NAS-Eigenbau: ComputerRalle zeigt praktische Homelab-Projekte, Video-Tutorials und Hilfe für deine IT.">
+    <meta name="theme-color" content="#ff6a21">
+
+
+
+    <title>ComputerRalle – Proxmox, Linux &amp; Homelab-Anleitungen</title>
+    <link rel="preload" as="image" href="images/computerralledigital-easy_kopfbannerkontur.png">
+    <link rel="stylesheet" href="index.css?v=contact-1">
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="icon" href="images/favicons/favicon.ico" sizes="16x16 24x24 32x32 48x48 64x64 128x128 256x256" type="image/x-icon">
+    <link rel="icon" href="images/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="images/favicons/favicon-48x48.png" sizes="48x48" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="canonical" href="https://computerralle.de/">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="ComputerRalle">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="ComputerRalle – Proxmox, Linux &amp; Homelab-Anleitungen">
+    <meta property="og:description" content="Proxmox-Anleitungen, Linux-Server und NAS-Eigenbau: ComputerRalle zeigt praktische Homelab-Projekte, Video-Tutorials und Hilfe für deine IT.">
+    <meta property="og:url" content="https://computerralle.de/">
+    <meta property="og:image" content="https://computerralle.de/images/ComputerRalle-Logo%202026%202000_72.png">
+    <meta property="og:image:width" content="1000">
+    <meta property="og:image:height" content="813">
+    <meta property="og:image:alt" content="ComputerRalle – Logo mit Porträt und Schriftzug">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ComputerRalle – Proxmox, Linux &amp; Homelab-Anleitungen">
+    <meta name="twitter:description" content="Proxmox-Anleitungen, Linux-Server und NAS-Eigenbau: ComputerRalle zeigt praktische Homelab-Projekte, Video-Tutorials und Hilfe für deine IT.">
+    <meta name="twitter:image" content="https://computerralle.de/images/ComputerRalle-Logo%202026%202000_72.png">
+    <meta name="twitter:image:alt" content="ComputerRalle – Logo mit Porträt und Schriftzug">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="ComputerRalle Startseite">
+        <img src="images/computerralledigital-easy_kopfbannerkontur.png" alt="ComputerRalle Digital-easy" width="4000" height="230" style="height: auto; object-fit: contain;">
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Menü öffnen" title="Menü öffnen"><span></span><span></span><span></span></button>
+      <nav id="main-navigation" aria-label="Hauptnavigation">
+        <a href="/">Start</a>
+        <a href="/#leistungen">Leistungen</a>
+        <a href="/#projekte">Projekte</a>
+        <a href="/#ueber">Über mich</a>
+        <a href="/#kanal">YT-Kanal</a>
+        <a href="/#proxmox">Proxmox</a>
+        <a href="/#anleitungen">Anleitungen</a>
+        <a href="/#kontakt">Kontakt</a>
+        <button class="contrast-toggle" type="button" aria-pressed="false" aria-label="Hohen Kontrast einschalten"><span aria-hidden="true">◐</span> Kontrast</button>
+      </nav>
+      <div class="scroll-progress" aria-hidden="true"><span></span></div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">Homelab. Linux. Hardware-DIY.</p>
+          <h1>ComputerRalle Computer- & IT-Themen</h1>
+          <p class="hero-copy">Tiefgreifende IT-Themen, verständlich erklärt: NAS-Eigenbau, Linux-Server, RAID, Docker und die kleinen wie großen Herausforderungen einer individuellen Infrastruktur.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="/#kontakt">Projekt anfragen</a>
+            <a class="button secondary" href="/#leistungen">Was ich mache</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="ComputerRalle Fokus">
+          <div class="hero-logo">
+            <img src="images/ComputerRalle-Logo 2026 2000_72.png" alt="ComputerRalle Logo" width="1000" height="813" style="height: auto; object-fit: contain;">
+          </div>
+          <div class="signal">
+            <span></span>
+            <strong>DIGITAL-easy</strong>
+          </div>
+          <h2>Server, Linux und Proxmox – komplexe Themen einfach erklärt.</h2>
+          <ul>
+            <li>NAS bauen, RAID verstehen und sauber planen</li>
+            <li>Linux-Server mit Cockpit und Docker verwalten</li>
+            <li>Hardware umbauen und Software sinnvoll optimieren</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section class="section intro">
+        <div>
+          <p class="eyebrow">Was dich erwartet</p>
+          <h2>Tief in die Technik. Verständlich erklärt.</h2>
+        </div>
+        <p>ComputerRalle verbindet handwerkliche Arbeit mit fortgeschrittener Softwarekonfiguration. Du bekommst keine Theorie aus dem Lehrbuch, sondern echte Projekte, nachvollziehbare Entscheidungen und Lösungen, die im Homelab bestehen müssen.</p>
+      </section>
+
+      <section class="service-grid" id="leistungen" aria-label="Leistungen">
+        <article>
+          <span class="icon">01</span>
+          <h3>NAS &amp; RAID</h3>
+          <p>Eigenbau, Gehäuseumbau, Festplattenplanung und RAID-Aufbau: von der ersten Idee bis zum laufenden Storage-System.</p>
+        </article>
+        <article>
+          <span class="icon">02</span>
+          <h3>Linux-Server</h3>
+          <p>Server einrichten, mit Cockpit verwalten und Dienste im eigenen Netzwerk zuverlässig betreiben.</p>
+        </article>
+        <article>
+          <span class="icon">03</span>
+          <h3>Hardware-DIY</h3>
+          <p>Netzteile umbauen, Gehäuse anpassen und aus vorhandener Hardware eine individuelle Lösung entwickeln.</p>
+        </article>
+        <article>
+          <span class="icon">04</span>
+          <h3>Software &amp; Tools</h3>
+          <p>Docker-Upgrades, Thunderbird, Paperless-ngx und die Werkzeuge, die ein Homelab im Alltag besser machen.</p>
+        </article>
+      </section>
+
+      <section class="project-grid" id="projekte" aria-label="Projekte">
+        <div class="project-heading">
+          <p class="eyebrow">Aus dem Homelab</p>
+          <h2>Projekte mit echten Baustellen und echten Ergebnissen.</h2>
+        </div>
+        <article>
+          <span class="icon">01</span>
+          <h3>Der NAS-Eigenbau</h3>
+          <p>Metallarbeiten am Gehäuse, Laufwerkslayout und RAID-Konzept: ein Storage-Projekt, bei dem Hardware und Planung zusammengehören.</p>
+        </article>
+        <article>
+          <span class="icon">02</span>
+          <h3>Linux im Dauerbetrieb</h3>
+          <p>Serverdienste, Updates und Container so aufsetzen, dass sie nicht nur im Test, sondern auch zuhause zuverlässig laufen.</p>
+        </article>
+        <article>
+          <span class="icon">03</span>
+          <h3>Langzeitprojekte</h3>
+          <p>Fortschritte, Rückschläge und die nächste Ausbaustufe: regelmäßige Updates zeigen, wie aus Ideen funktionierende Systeme werden.</p>
+        </article>
+      </section>
+
+      <section class="split" id="ablauf">
+        <div class="image-card">
+          <img src="images/photo-1677022725616-91e41d36db21.jpeg" alt="Arbeitsplatz mit Laptop und Technik" width="1080" height="1620" loading="lazy" decoding="async">
+        </div>
+        <div class="steps">
+          <p class="eyebrow">So entstehen die Videos</p>
+          <h2>Erst bauen, dann erklären.</h2>
+          <div class="step">
+            <b>1</b>
+            <div>
+              <h3>Projekt auf den Tisch</h3>
+              <p>Eine Idee wird zum konkreten Aufbau: mit Material, Werkzeug und einem Plan für das Ergebnis.</p>
+            </div>
+          </div>
+          <div class="step">
+            <b>2</b>
+            <div>
+              <h3>Schritt für Schritt</h3>
+              <p>Hardware, Konfiguration und Stolpersteine werden so gezeigt, dass du die Entscheidungen nachvollziehen kannst.</p>
+            </div>
+          </div>
+          <div class="step">
+            <b>3</b>
+            <div>
+              <h3>Nach dem Upgrade</h3>
+              <p>Am Ende zählt der Alltag: läuft der Dienst, ist das System wartbar und was kommt als Nächstes?</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="ueber">
+        <div>
+          <p class="eyebrow">Über ComputerRalle</p>
+          <h2>Vom C64 zum Homelab.</h2>
+          <p class="about-lead">Technik begleitet mich seit meiner Kindheit. Heute verbinde ich Erfahrung, Neugier und echtes Handwerk.</p>
+        </div>
+        <div class="about-copy">
+          <p>Ich bin Ralf-Peter Kleinert, geboren 1981 in Hennigsdorf bei Berlin. Als echter DDR-Bürger bin ich mit dem Commodore C64 aufgewachsen und habe seitdem die gesamte Entwicklung miterlebt: von den ersten klapprigen Rechnern bis zur heutigen High-End-Maschine.</p>
+          <p>Mein Drang zu lernen hat mich tief in die Welt der Computer geführt. Seit Windows 95 kenne ich die typischen „Computerprobleme“ aus erster Hand. Ich bin überzeugt: Gerade diese Schwierigkeiten bringen die besten Experten hervor.</p>
+          <p>Mit dem Web 2.0 bekam Lernen für mich eine neue Dimension. Computer wurden vernetzt, Kommunikation wurde unmittelbarer und aus einsamen Nerd-Runden entstand weltweites Networking.</p>
+          <p>Von 2010 bis 2012 absolvierte ich meine Ausbildung zum Mediengestalter beim Silicon Studio Berlin. Ergänzt wurde sie durch ein Fotografie-Praktikum bei One I A Fotostudio – wichtiges Handwerkszeug für mein heutiges Social Media Management.</p>
+          <p>Heute blogge ich über IT, schreibe Bücher und arbeite selbstständig als System- und Server-Administrator. Ich beherrsche alle Windows-Systeme und beschäftige mich intensiv mit Linux- und Windows-Servern. Meine Kundinnen und Kunden unterstütze ich dabei, Systeme aufzubauen, zu pflegen und dauerhaft zu warten – bevorzugt mit Proxmox VE als Plattform.</p>
+          <p>Auf YouTube und im Internet findest du mich unter meinem Namen:</p>
+          <strong class="about-handle">#ComputerRalle</strong>
+        </div>
+      </section>
+
+      <section class="channel-section" id="kanal" aria-label="Kanalformate">
+        <div>
+          <p class="eyebrow">Der YT-Kanal</p>
+          <h2>Für Neugierige, Tüftler und alle, die es selbst wissen wollen.</h2>
+          <p>Hallo liebe Leute! Hier auf meiner Seite bekommst du Einblicke in meine Projekte, meine Erfahrungen und in die Technik, die mich begeistert. <a href="https://www.youtube.com/@ComputerRalle" class="links" target="_blank" rel="noopener">Auf YouTube stelle ich viele Anleitungen und Tutorials bereit</a>: verständlich erklärt, direkt aus dem Homelab und mit allen wichtigen Schritten zum Nachmachen.</p>
+          <p>Ob NAS-Eigenbau, Linux-Server, Docker oder Hardware-DIY: Ich nehme dich mit an die Werkbank und zeige nicht nur das fertige Ergebnis, sondern auch den Weg dorthin. So entstehen Lösungen, die du verstehen, nachbauen und im eigenen Zuhause weiterentwickeln kannst.</p>
+          <p>Wenn du noch tiefer einsteigen möchtest, findest du auf <a href="https://blog.ralf-peter-kleinert.de/" class="links" target="_blank" rel="noopener">meinem Fachblog</a> und auf <a href="https://ralf-peter-kleinert.de/" class="links" target="_blank" rel="noopener">ralf-peter-kleinert.de</a> ausführliche Anleitungen zu Linux, Windows, Proxmox, Firewalls und weiteren IT-Themen.</p>
+        </div>
+        <div class="channel-list">
+          <article>
+            <h3>Tutorials</h3>
+            <p>Ausführliche Anleitungen für Linux, Server, Docker, Thunderbird und Paperless-ngx.</p>
+          </article>
+          <article>
+            <h3>Status-Updates</h3>
+            <p>Langzeitprojekte bleiben transparent: Was funktioniert, was musste geändert werden?</p>
+          </article>
+          <article>
+            <h3>Shorts</h3>
+            <p>Kurze Einblicke aus dem Arbeitsalltag und fertige Ergebnisse in kompakter Form.</p>
+          </article>
+        </div>
+        <div class="channel-stats">
+          <div class="stats-heading">
+            <p class="eyebrow">Kanal-Performance</p>
+            <h3>Letzte 12 Monate</h3>
+          </div>
+          <div class="stats-grid">
+            <div><strong>344.109</strong><span>Aufrufe</span><b>+153,0 %</b></div>
+            <div><strong>35.238,8</strong><span>Wiedergabezeit (Stunden)</span><b>+125,4 %</b></div>
+            <div><strong>3.062.898</strong><span>Impressionen</span><b>+93,9 %</b></div>
+            <div><strong>4,34 %</strong><span>Klickrate (CTR)</span><b>+0,37 Prozentpunkte</b></div>
+            <div><strong>1.660</strong><span>Kommentare</span><b>+221,1 %</b></div>
+          </div>
+          <p class="channel-insight"><strong>Starkes Wachstum:</strong> Die Aufrufe, Wiedergabezeit und Kommentare zeigen, dass die detaillierten Tutorials und DIY-Projekte eine wachsende und aktive Community erreichen. Über drei Millionen Impressionen und die verbesserte Klickrate machen sichtbar, wie gut Themen und Präsentation bei den Zuschauern ankommen.</p>
+        </div>
+      </section>
+
+      <section class="proxmox-section" id="proxmox" aria-label="Proxmox">
+        <div class="proxmox-intro">
+          <p class="eyebrow">Proxmox</p>
+          <h2>Proxmox verstehen, sauber aufbauen und zuverlässig betreiben.</h2>
+          <p>Ich arbeite seit Jahren intensiv mit Proxmox VE und begleite Kundenumgebungen von der ersten Planung über die Installation bis zum laufenden Betrieb. Dabei geht es mir nicht um Showeffekte, sondern um stabile Systeme, nachvollziehbare Entscheidungen und Hilfe, die im Alltag wirklich trägt.</p>
+          <p>Auf YouTube habe ich zwei umfangreiche Proxmox-Lehrgänge mit über 25 Videos veröffentlicht. Die Tutorials finden starken Anklang, weil sie nicht nur Funktionen zeigen, sondern echte Zusammenhänge erklären: Storage, Netzwerke, Backups, Cluster, Hardware-Fragen und typische Stolperstellen aus der Praxis.</p>
+        </div>
+        <div class="proxmox-grid">
+          <article>
+            <span>01</span>
+            <h3>Komplette Video-Lehrgänge</h3>
+            <p>Zwei Proxmox-Playlists führen Schritt für Schritt durch die wichtigen Grundlagen und Praxisthemen. Verständlich erklärt, mit echtem Homelab-Bezug und so aufgebaut, dass man die Inhalte wirklich nacharbeiten kann.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Fachbücher aus der Praxis</h3>
+            <p>Neben den Videos schreibe und verkaufe ich seit Jahren Proxmox-Fachbücher auf Amazon. Die Bücher greifen die Fragen auf, die in echten Projekten immer wieder auftauchen.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Kundenumgebungen im Betrieb</h3>
+            <p>Ich installiere, betreue und pflege Proxmox-Systeme für Kundinnen und Kunden. Wichtig ist mir dabei ein ruhiger, verlässlicher Umgang: sauber dokumentiert, verständlich erklärt und mit Blick auf langfristige Stabilität.</p>
+          </article>
+        </div>
+        <div class="proxmox-proof">
+          <strong>Über 25 Videos</strong>
+          <span>in zwei Proxmox-Lehrgängen</span>
+          <strong>Fachbücher</strong>
+          <span>für Einsteiger und Fortgeschrittene</span>
+          <strong>Kundenpraxis</strong>
+          <span>Installation, Betreuung und Wartung</span>
+        </div>
+        <div class="proxmox-actions" aria-label="Proxmox Links">
+          <a class="button primary" href="https://www.youtube.com/watch?v=fpmVefC77kQ&amp;list=PL0CRlqUkwGBkxYJnkPXSZQwhma_jSJVHc" target="_blank" rel="noopener">Lehrgang 1 ansehen</a>
+          <a class="button secondary" href="https://www.youtube.com/watch?v=A9hcq0KZjYE&amp;list=PL0CRlqUkwGBnzLWp3O5IxkWxYe16ni3VB" target="_blank" rel="noopener">Lehrgang 2 ansehen</a>
+          <a class="button secondary" href="https://www.amazon.de/stores/Ralf-Peter-Kleinert-RPK/author/B0D6FVWCTN?ref=sr_ntt_srch_lnk_2&amp;qid=1788532996&amp;sr=8-2&amp;shoppingPortalEnabled=true" target="_blank" rel="noopener">Fachbücher auf Amazon</a>
+          <a class="button secondary" href="https://www.google.com/maps/place/Ralf-Peter+Kleinert+DIGITAL-easy/@51.063813,5.1771787,6z/data=!4m16!1m7!3m6!1s0x213630b1703bf835:0x855ed4a852913279!2sRalf-Peter+Kleinert+DIGITAL-easy!8m2!3d51.175807!4d10.4541194!16s%2Fg%2F11vsbp13g6!3m7!1s0x213630b1703bf835:0x855ed4a852913279!8m2!3d51.175807!4d10.4541194!9m1!1b1!16s%2Fg%2F11vsbp13g6?entry=ttu&amp;g_ep=EgoyMDI2MDkwMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener">Kundenstimmen ansehen</a>
+        </div>
+        <p class="proxmox-note">Wenn du Proxmox einsetzen, verstehen oder eine bestehende Umgebung sauber weiterentwickeln möchtest, helfe ich gern mit Erfahrung aus Videos, Büchern und echter Kundenpraxis. Für sehr tiefgehende Anleitungen zu Linux, Windows, Proxmox, Firewalls und verwandten Themen findest du weitere Inhalte auf <a href="https://ralf-peter-kleinert.de/" class="links" target="_blank" rel="noopener">ralf-peter-kleinert.de</a> und im <a href="https://blog.ralf-peter-kleinert.de/" class="links" target="_blank" rel="noopener">Fachblog</a>.</p>
+      </section>
+
+      <section class="guides-section" id="anleitungen" aria-labelledby="guides-title">
+        <p class="eyebrow">Zum Nachlesen und Nachmachen</p>
+        <h2 id="guides-title">Meine wichtigsten Proxmox-Anleitungen.</h2>
+        <p class="guides-intro">Vom ersten Server bis zum abgesicherten Betrieb: Hier findest du ausgewählte Anleitungen von meiner Fachseite.</p>
+        <ul class="guides-list">
+          <li><a href="https://ralf-peter-kleinert.de/video-tutorials/proxmox-server-installation.html" target="_blank" rel="noopener"><span class="guide-topic">Einstieg · Video</span><h3>Proxmox auf einem Hetzner-Server installieren</h3><p>Der erste Teil des Videolehrgangs zeigt die Installation von Proxmox VE 8.3.0.</p><span class="guide-action">Anleitung ansehen <span aria-hidden="true">↗</span></span></a></li>
+          <li><a href="https://ralf-peter-kleinert.de/linux-server/proxmox-server-sichern-haerten.html" target="_blank" rel="noopener"><span class="guide-topic">Sicherheit</span><h3>Proxmox absichern und härten</h3><p>Den eigenen Proxmox-Server schützen und die Sicherheit der Umgebung verbessern.</p><span class="guide-action">Anleitung lesen <span aria-hidden="true">↗</span></span></a></li>
+          <li><a href="https://ralf-peter-kleinert.de/video-tutorials/proxmox-ssh-keys-installieren.html" target="_blank" rel="noopener"><span class="guide-topic">SSH-Zugang · Video</span><h3>SSH-Keys unter Linux und Windows einrichten</h3><p>Schlüssel erstellen und auf dem Proxmox-Server installieren – im vierten Teil des Videolehrgangs.</p><span class="guide-action">Anleitung ansehen <span aria-hidden="true">↗</span></span></a></li>
+          <li><a href="https://ralf-peter-kleinert.de/linux-server/proxmox-verschluesselt-backup.html" target="_blank" rel="noopener"><span class="guide-topic">Datensicherung</span><h3>Verschlüsselte Backups ohne PBS erstellen</h3><p>Proxmox-Backups verschlüsseln, ohne einen Proxmox Backup Server einzusetzen.</p><span class="guide-action">Anleitung lesen <span aria-hidden="true">↗</span></span></a></li>
+          <li><a href="https://ralf-peter-kleinert.de/sicherheits-anbieter/1blu-backupserver.html" target="_blank" rel="noopener"><span class="guide-topic">Backup-Server</span><h3>Proxmox Backup Server bei 1blu einrichten</h3><p>Einen 1blu Storage-Server als Grundlage für einen eigenen Proxmox Backup Server nutzen.</p><span class="guide-action">Anleitung lesen <span aria-hidden="true">↗</span></span></a></li>
+          <li><a href="https://ralf-peter-kleinert.de/linux-server/proxmox-pve8-to-pve9-upgrade.html" target="_blank" rel="noopener"><span class="guide-topic">Upgrade</span><h3>Von Proxmox VE 8 auf VE 9 wechseln</h3><p>Die Anleitung zum Versionswechsel von PVE 8 auf PVE 9 mit Debian Trixie.</p><span class="guide-action">Anleitung lesen <span aria-hidden="true">↗</span></span></a></li>
+          <li><a href="https://ralf-peter-kleinert.de/linux-server/proxmox-hochverfuegbare-vm.html" target="_blank" rel="noopener"><span class="guide-topic">Cluster</span><h3>Virtuelle Maschinen hochverfügbar betreiben</h3><p>Einen Proxmox-Cluster aufbauen und virtuelle Maschinen für Hochverfügbarkeit einrichten.</p><span class="guide-action">Anleitung lesen <span aria-hidden="true">↗</span></span></a></li>
+          <li><a href="https://ralf-peter-kleinert.de/linux-server/proxmox-und-pfsense-eine-ip.html" target="_blank" rel="noopener"><span class="guide-topic">Netzwerk &amp; Firewall</span><h3>Proxmox und pfSense mit einer öffentlichen IP</h3><p>Netzwerksicherheit mit pfSense auf einem Hetzner-Server mit nur einer öffentlichen IP-Adresse.</p><span class="guide-action">Anleitung lesen <span aria-hidden="true">↗</span></span></a></li>
+        </ul>
+        <a class="button secondary" href="https://ralf-peter-kleinert.de/inhaltsverzeichnis.html" target="_blank" rel="noopener">Alle Anleitungen im Inhaltsverzeichnis <span aria-hidden="true">↗</span></a>
+      </section>
+      <section class="proof">
+        <div>
+          <strong>klar</strong>
+          <span>ohne Fachchinesisch</span>
+        </div>
+        <div>
+          <strong>sicher</strong>
+          <span>mit alltagstauglichen Schritten</span>
+        </div>
+        <div>
+          <strong>praktisch</strong>
+          <span>direkt am echten Problem</span>
+        </div>
+      </section>
+
+      <section class="contact" id="kontakt">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Lass uns deinen digitalen Knoten entwirren.</h2>
+          <p>Schreib mir kurz, worum es geht. Ich melde mich mit einer klaren Einschätzung, was sinnvoll ist und wie wir starten können.</p>
+          <p><a class="links contact-link" href="mailto:kontakt@computerralle.de">kontakt@computerralle.de</a></p> 
+		  <h3>Kooperationen & YouTube-Partnerschaften</h3>
+		  <p>Sie möchten Ihr Unternehmen, ein Produkt oder eine Dienstleistung einer technikaffinen Zielgruppe vorstellen?</p>
+		  <p>Ich bin offen für passende Kooperationen mit Unternehmen, Herstellern und Agenturen rund um meinen YouTube-Kanal <a href="https://www.youtube.com/@ComputerRalle" class="links" target="_blank" rel="noopener" title="ComputerRalle on YouTube">ComputerRalle</a>.</p>
+		  <p>Ob Sponsoring, Produktvorstellung, Integration in ein bestehendes Video oder eine längerfristige Partnerschaft – wenn Ihr Angebot zu meinen Themen und meiner Community passt, freue ich mich über Ihre Anfrage.</p>
+		  <p>Im Mittelpunkt stehen bei mir IT, Homelab, Linux, Server, Proxmox, Storage, Hardware und praktische Technikprojekte. Wichtig ist mir dabei, dass Kooperationen thematisch zu meinem Kanal passen und gegenüber meinen Zuschauerinnen und Zuschauern transparent bleiben.</p>
+		  <h4>Interesse an einer Zusammenarbeit?</h4>
+		  <p>Schreiben Sie mir gerne mit einer kurzen Vorstellung Ihres Unternehmens, des Produkts und Ihrer Idee für eine mögliche Kooperation.</p>
+        </div>
+        <form id="contact-form" action="scripts/form-acdf-block-2.php" method="post" aria-label="Kontaktformular">
+          <label for="contact-name">Name
+            <input type="text" id="contact-name" name="name" autocomplete="name" maxlength="200" required>
+          </label>
+          <label for="contact-email">E-Mail
+            <input type="email" id="contact-email" name="email" autocomplete="email" maxlength="254" required>
+          </label>
+          <label for="contact-message">Nachricht
+            <textarea id="contact-message" name="message" rows="6" maxlength="10000" required></textarea>
+          </label>
+          <p class="contact-privacy">Ich verwende deine Angaben, um deine Anfrage zu beantworten. Weitere Informationen findest du in der <a class="links" href="datenschutzerklaerung.html">Datenschutzerklärung</a>.</p>
+          <input type="hidden" name="recaptchaResponse" value="">
+          <button class="button primary" type="submit">Nachricht senden</button>
+          <p id="contact-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <span>ComputerRalle - digital-easy</span>
+      <span>IT einfach erklärt von Ralf-Peter Kleinert</span>
+      <nav class="legal-links" aria-label="Rechtliche Hinweise">
+        <a href="datenschutzerklaerung.html">Datenschutzerklärung</a>
+        <a href="impressum.html">Impressum</a>
+        <a href="https://knowledge.ralf-peter-kleinert.de/" target="_blank" rel="noopener">Knowledge Base</a>
+      </nav>
+      <nav class="social-links" aria-label="Social Media">
+        <a class="social-youtube" href="https://www.youtube.com/@ComputerRalle" target="_blank" rel="noopener" aria-label="YouTube"><img class="social-icon" src="https://cdn.simpleicons.org/youtube/ffffff" alt="" width="24" height="24" loading="lazy" decoding="async">YouTube</a>
+        <a class="social-instagram" href="https://www.instagram.com/computerralle/" target="_blank" rel="noopener" aria-label="Instagram"><img class="social-icon" src="https://cdn.simpleicons.org/instagram/ffffff" alt="" width="24" height="24" loading="lazy" decoding="async">Instagram</a>
+        <a class="social-facebook" href="https://www.facebook.com/ComputerRalle.de" target="_blank" rel="noopener" aria-label="Facebook"><img class="social-icon" src="https://cdn.simpleicons.org/facebook/ffffff" alt="" width="24" height="24" loading="lazy" decoding="async">Facebook</a>
+      </nav>
+    </footer>
+    <button class="back-to-top" type="button" aria-label="Nach oben" title="Nach oben">↑</button>
+    <script>
+      const getLinkHash = (link) => new URL(link.getAttribute('href'), window.location.href).hash || '#top';
+      const sectionLinks = [...document.querySelectorAll('#main-navigation a:not(.nav-cta)')];
+      const sections = sectionLinks
+        .map((link) => document.querySelector(getLinkHash(link)))
+        .filter(Boolean);
+
+      const updateActiveNav = () => {
+        const threshold = window.innerHeight * 0.38;
+        let currentSection = sections[0];
+        sections.forEach((section) => {
+          if (section.getBoundingClientRect().top <= threshold) currentSection = section;
+        });
+        sectionLinks.forEach((link) => {
+          link.classList.toggle('is-active', getLinkHash(link) === `#${currentSection.id}`);
+        });
+      };
+
+      const updateScrollLayer = () => {
+        document.documentElement.style.setProperty('--scroll-shift', `${window.scrollY * -0.12}px`);
+        const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollableHeight > 0 ? window.scrollY / scrollableHeight : 0;
+        document.documentElement.style.setProperty('--scroll-progress', `${progress * 100}%`);
+        updateActiveNav();
+      };
+      window.addEventListener('scroll', updateScrollLayer, { passive: true });
+      window.addEventListener('resize', updateScrollLayer);
+      updateScrollLayer();
+
+      const contrastToggle = document.querySelector('.contrast-toggle');
+      const contrastEnabled = localStorage.getItem('computer-ralle-high-contrast') === 'true';
+      const updateContrast = (enabled) => {
+        document.documentElement.classList.toggle('high-contrast', enabled);
+        contrastToggle.setAttribute('aria-pressed', String(enabled));
+        contrastToggle.setAttribute('aria-label', enabled ? 'Hohen Kontrast ausschalten' : 'Hohen Kontrast einschalten');
+      };
+      updateContrast(contrastEnabled);
+      contrastToggle.addEventListener('click', () => {
+        const enabled = !document.documentElement.classList.contains('high-contrast');
+        localStorage.setItem('computer-ralle-high-contrast', String(enabled));
+        updateContrast(enabled);
+      });
+
+      const menuToggle = document.querySelector('.menu-toggle');
+      menuToggle.addEventListener('click', () => {
+        const isOpen = document.querySelector('.site-header').classList.toggle('nav-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+      });
+      document.querySelectorAll('#main-navigation a').forEach((link) => link.addEventListener('click', () => {
+        document.querySelector('.site-header').classList.remove('nav-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Menü öffnen');
+      }));
+
+      document.querySelector('.back-to-top').addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    </script>
+    <script>
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const button = contactForm.querySelector('button[type="submit"]');
+        const status = document.getElementById('contact-status');
+        button.disabled = true;
+        status.hidden = false;
+        status.textContent = 'Deine Nachricht wird gesendet …';
+        try {
+          const response = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm), headers: { 'Accept': 'application/json' } });
+          const result = await response.json();
+          if (!response.ok || result.success !== true) throw new Error('Send failed');
+          contactForm.reset();
+          status.textContent = 'Vielen Dank! Deine Nachricht wurde gesendet.';
+        } catch (error) {
+          status.textContent = 'Der Versand konnte nicht bestätigt werden. Deine Eingaben bleiben erhalten. Bitte versuche es später erneut oder schreibe an kontakt@computerralle.de.';
+        } finally {
+          button.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>
