@@ -308,21 +308,24 @@
 		  <h4>Interesse an einer Zusammenarbeit?</h4>
 		  <p>Schreiben Sie mir gerne mit einer kurzen Vorstellung Ihres Unternehmens, des Produkts und Ihrer Idee für eine mögliche Kooperation.</p>
         </div>
-        <form id="contact-form" action="scripts/form-acdf-block-2.php" method="post" aria-label="Kontaktformular">
+        <form id="contact-form" aria-label="Kontaktformular" aria-describedby="contact-help" hidden>
+          <p id="contact-help">Dieses Formular öffnet dein eingerichtetes Mailprogramm mit deinen Eingaben. Dort prüfst und versendest du die Nachricht selbst. Das Formular sendet deine Eingaben nicht an den Webserver und speichert sie dort nicht.</p>
           <label for="contact-name">Name
             <input type="text" id="contact-name" name="name" autocomplete="name" maxlength="200" required>
           </label>
-          <label for="contact-email">E-Mail
-            <input type="email" id="contact-email" name="email" autocomplete="email" maxlength="254" required>
+          <label for="contact-email">Antwortadresse (optional)
+            <input type="email" id="contact-email" name="email" autocomplete="email" maxlength="254" aria-describedby="email-help">
           </label>
+          <p class="contact-privacy" id="email-help">Falls du eine andere Antwortadresse nennen möchtest. Absender ist dein im Mailprogramm gewähltes Konto.</p>
           <label for="contact-message">Nachricht
-            <textarea id="contact-message" name="message" rows="6" maxlength="10000" required></textarea>
+            <textarea id="contact-message" name="message" rows="6" maxlength="1500" required aria-describedby="message-help"></textarea>
           </label>
+          <p class="contact-privacy" id="message-help">Bis zu 1.500 Zeichen. Längere Texte und Anhänge kannst du im Mailprogramm ergänzen.</p>
           <p class="contact-privacy">Ich verwende deine Angaben, um deine Anfrage zu beantworten. Weitere Informationen findest du in der <a class="links" href="datenschutzerklaerung.html">Datenschutzerklärung</a>.</p>
-          <input type="hidden" name="recaptchaResponse" value="">
-          <button class="button primary" type="submit">Nachricht senden</button>
+          <button class="button primary" type="submit">Im Mailprogramm öffnen</button>
           <p id="contact-status" role="status" aria-live="polite" hidden></p>
         </form>
+        <noscript><p>Für die Übernahme der Formularfelder ist JavaScript erforderlich. Bitte schreibe direkt an <a class="links" href="mailto:kontakt@computerralle.de">kontakt@computerralle.de</a>.</p></noscript>
       </section>
     </main>
 
@@ -402,25 +405,36 @@
     </script>
     <script>
       const contactForm = document.getElementById('contact-form');
-      contactForm.addEventListener('submit', async (event) => {
+      const contactName = contactForm.elements.namedItem('name');
+      const contactEmail = contactForm.elements.namedItem('email');
+      const contactMessage = contactForm.elements.namedItem('message');
+      for (const field of [contactName, contactMessage]) {
+        field.addEventListener('input', () => field.setCustomValidity(''));
+      }
+      contactForm.addEventListener('submit', (event) => {
         event.preventDefault();
-        const button = contactForm.querySelector('button[type="submit"]');
-        const status = document.getElementById('contact-status');
-        button.disabled = true;
-        status.hidden = false;
-        status.textContent = 'Deine Nachricht wird gesendet …';
-        try {
-          const response = await fetch(contactForm.action, { method: 'POST', body: new FormData(contactForm), headers: { 'Accept': 'application/json' } });
-          const result = await response.json();
-          if (!response.ok || result.success !== true) throw new Error('Send failed');
-          contactForm.reset();
-          status.textContent = 'Vielen Dank! Deine Nachricht wurde gesendet.';
-        } catch (error) {
-          status.textContent = 'Der Versand konnte nicht bestätigt werden. Deine Eingaben bleiben erhalten. Bitte versuche es später erneut oder schreibe an kontakt@computerralle.de.';
-        } finally {
-          button.disabled = false;
+        for (const field of [contactName, contactMessage]) {
+          field.setCustomValidity(field.value.trim() ? '' : 'Bitte fülle dieses Feld aus.');
         }
+        if (!contactForm.reportValidity()) return;
+        const body = [
+          `Name: ${contactName.value.trim()}`,
+          ...(contactEmail.value.trim() ? [`Antwortadresse: ${contactEmail.value.trim()}`] : []),
+          '', 'Nachricht:',
+          contactMessage.value.trim().replace(/\r\n|\r|\n/g, '\r\n'),
+        ].join('\r\n');
+        const uri = 'mailto:kontakt@computerralle.de'
+          + '?subject=' + encodeURIComponent('Kontaktformular computerralle.de')
+          + '&body=' + encodeURIComponent(body);
+        const status = document.getElementById('contact-status');
+        status.hidden = false;
+        status.textContent = 'Die Übergabe an dein Mailprogramm wurde angefordert. '
+          + 'Die Nachricht wurde noch nicht versendet. Falls sich kein Mailprogramm öffnet '
+          + 'oder Text fehlt, kopiere deine Eingaben und schreibe an '
+          + 'kontakt@computerralle.de. Deine Eingaben bleiben hier erhalten.';
+        window.location.href = uri;
       });
+      contactForm.hidden = false;
     </script>
   </body>
 </html>

@@ -1259,6 +1259,7 @@ html.high-contrast .guides-list h3 { color: #fff; }
 }
 /* Kontaktformular */
 .contact form { min-width: 0; align-self: start; }
+.contact form[hidden] { display: none; }
 .contact .contact-privacy { margin: 0; font-size: 0.9rem; }
 .contact textarea { resize: vertical; min-height: 10rem; }
 .contact button:disabled { opacity: 0.65; cursor: wait; }
